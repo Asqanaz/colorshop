@@ -1,5 +1,12 @@
 [
   {
+    "id": 0,
+    "name": "Orange",
+    "price": 36,
+    "hexcode": "#FF5733",
+    "isAvailable": false
+  },
+  {
     "id": 1,
     "name": "Red",
     "price": 15,

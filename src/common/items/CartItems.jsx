@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
+import cartItems from "../../data/cartItems.json";
+
 const CartItems = (props) => {
   const { id, hexcode, price, name, onClick } = props;
   const [quantity, setQuantity] = useState(0);
   const [cartCount, setCarCount] = useState(0);
   
-   
 
   return (
     <div className={id > 3 ? "container top" : "container"} >

@@ -11,6 +11,7 @@ const HomePage = () => {
             Shop Items
         </p>
         <Items/>
+        
     </div>
   )
 }

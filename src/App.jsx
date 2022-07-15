@@ -5,7 +5,6 @@ const App = () => {
   return (
     <div>
         <HomePage />
-    <h1>Hello</h1>
     </div>
   )
 }
