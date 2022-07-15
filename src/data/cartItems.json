@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Red",
+    "price": 15,
+    "hexcode": "#D35050",
+    "isAvailable":  false
+  },
+  {
+    "id": 2,
+    "name": "Blue",
+    "price": 22,
+    "hexcode": "#529BDF",
+    "isAvailable":  false
+  },
+  {
+    "id": 3,
+    "name": "Gray",
+    "price": 31,
+    "hexcode": "#D8D8D8",
+    "isAvailable":  false
+  }
+  ,
+  {
+    "id": 4,
+    "name": "Green",
+    "price": 9,
+    "hexcode": "#77F63C",
+    "isAvailable":  false
+  },
+  {
+    "id": 5,
+    "name": "Yellow",
+    "price": 55,
+    "hexcode": "#E6F016",
+    "isAvailable":  false
+  },
+  {
+    "id": 6,
+    "name": "Pink",
+    "price": 67,
+    "hexcode": "#E40DB6",
+    "isAvailable":  false
+  }
+]
