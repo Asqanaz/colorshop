@@ -5,15 +5,21 @@ import cartItems from "../../data/cartItems.json";
 
 const Items = () => {
   const [availableCartItems, setAvailableCartItems] = useState([]);
-  const [cartItemsState, setCartItemsState] = useState(cartItems)
-  
-  console.log(cartItemsState)
-  console.log(availableCartItems)
+  const [cartItemsState, setCartItemsState] = useState(cartItems);
+
   const handleAddCart = (e) => {
-    setCartItemsState(cartItemsState.map(item => item.id === e.id ? {...item, isAvailable: !item.isAvailable } : {...item}))
-    setAvailableCartItems(availableCartItems.map(item => cartItemsState.isAvailable ? {...item, cartItemsState} : {...item}))
-  }
+    setCartItemsState(
+      cartItemsState.map((item) =>
+        item.id === e.id
+          ? { ...item, isAvailable: !item.isAvailable }
+          : { ...item }
+      )
+    );    
+  };  
   
+  
+  console.log(availableCartItems);
+  console.log(cartItemsState);
   return (
     <div className="items-container">
       {cartItems.map((item) => (
@@ -23,7 +29,7 @@ const Items = () => {
           hexcode={item.hexcode}
           name={item.name}
           price={item.price}
-          onClick = {handleAddCart.bind(this, item)}
+          onClick={handleAddCart.bind(this, item)}
         />
       ))}
     </div>

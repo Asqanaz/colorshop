@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
+  "homepage": "https://asqanaz.github.io/colorshop/",
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
@@ -21,7 +23,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "react-scripts": "^5.0.1"
+    "react-redux": "^8.0.2",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.0"
   },
   "browserslist": {
     "production": [
