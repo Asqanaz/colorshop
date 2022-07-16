@@ -2,33 +2,18 @@ import React, { useEffect, useState } from "react"
 import "./items.css"
 import CartItems from "./CartItems"
 import cartItems from "../../data/cartItems.json"
-import { inputAdornmentClasses } from "@mui/material"
 
 const Items = () => {
-	const [cartItemsState, setCartItemsState] = useState(cartItems)
-	const [pickedItems, setPickedItems] = useState([])
-	const [itemsQuantity, setItemQuantity] = useState(pickedItems.length)
+	const [availableItems, setAvailableItems] = useState([])
+	const [itemsQuantity, setItemQuantity] = useState(0)
+
 	const handleAddCart = (e) => {
-		setCartItemsState(
-			cartItemsState.map((item) =>
-				item.id === e.id
-					? { ...item, isAvailable: !item.isAvailable }
-					: { ...item }
-			)
-		)
-
+    setAvailableItems([...availableItems, e])
+    setItemQuantity(itemsQuantity + 1)
 	}
-  
-	useEffect(() => {
-    cartItemsState.forEach((item) => {
-      item.isAvailable
-        ? setPickedItems([...pickedItems, item])
-        : { ...pickedItems }
-    })
-    }, [cartItemsState])
 
-	console.log(cartItemsState)
-	console.log(pickedItems)
+
+  console.log(availableItems)
 	return (
 		<div className="items-container">
 			{cartItems.map((item) => (

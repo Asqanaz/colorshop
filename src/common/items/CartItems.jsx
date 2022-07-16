@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
-import cartItems from "../../data/cartItems.json";
 
 const CartItems = (props) => {
   const { id, hexcode, price, name, onClick } = props;
-  const [quantity, setQuantity] = useState(0);
-  const [cartCount, setCarCount] = useState(0);
-  
 
+  const [quantity, setQuantity] = useState(0);
+  
+  const quantityIncrement = () => {
+    setQuantity(quantity + 1)
+  }
+  const quantityDecrement = () => {
+    setQuantity(quantity - 1)
+  }
+
+  
   return (
     <div className={id > 3 ? "container top" : "container"} >
       <div className="color-image" style={{ background: hexcode }}></div>
@@ -18,9 +24,9 @@ const CartItems = (props) => {
         </div>
         {quantity != 0 ? (
           <div className="quantity-info">
-            <button onClick={() => setQuantity(quantity + 1)}>+</button>
+            <button onClick={quantityIncrement}>+</button>
             <div className="count">{quantity}</div>
-            <button onClick={() => setQuantity(quantity - 1)}>-</button>
+            <button onClick = {quantityDecrement}>-</button>
           </div>
         ) : (
           <Button onClick = {onClick}>Add to cart</Button>
